@@ -20,6 +20,11 @@
     modal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
   }
+  document.getElementById('privacyInfo').addEventListener('click', event => {
+    event.preventDefault();
+    openModal('信息说明', '<p>填写内容仅在当前浏览器用于匹配流程演示，不保存或上传。选择健康资料后，只显示文件名，不读取文件内容。</p><p>当前页面没有接入真实 AI 分析、医学评估或购买服务。</p>');
+    modalPrimary.dataset.action = 'close';
+  });
   function showResult(blocked, title, message, lines) {
     result.hidden = false;
     result.classList.toggle('blocked', blocked);
