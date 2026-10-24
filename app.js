@@ -117,4 +117,16 @@
     document.querySelector('.desktop-nav').classList.remove('open');
     menuToggle.textContent = '☰';
   }));
+  const productHeroImage = document.getElementById('productHeroImage');
+  const productImageCaption = document.getElementById('productImageCaption');
+  document.querySelectorAll('.product-thumb').forEach(button => button.addEventListener('click', () => {
+    productHeroImage.src = button.dataset.image;
+    productHeroImage.alt = button.dataset.alt;
+    productImageCaption.textContent = button.dataset.caption;
+    document.querySelectorAll('.product-thumb').forEach(thumb => {
+      const active = thumb === button;
+      thumb.classList.toggle('active', active);
+      thumb.setAttribute('aria-pressed', String(active));
+    });
+  }));
 })();
