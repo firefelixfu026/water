@@ -24,4 +24,5 @@
 - index.html：页面结构与内容
 - styles.css：页面样式与响应式布局
 - app.js：匹配流程、适用性拦截、信息弹窗与菜单交互
+- styles-storefront.css：更明亮的饮品电商视觉，含促销提示条、产品色卡和高对比购买入口
 - AI_USAGE.md：AI 使用简要记录
